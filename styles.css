@@ -1,0 +1,143 @@
+
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+
+}
+
+#party {
+  left: 0;
+  top: 50px;
+  width: 100%;
+}
+.sticky {
+  margin-top: 7vh;
+  padding-left: 10px;
+  position:sticky;
+}
+.allPokemonText {
+  padding-left: 10px;
+}
+
+#party-pokemon {
+  overflow: scroll;
+  max-height: 30vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#all {
+  position: relative;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+#all-pokemon {
+  overflow: scroll;
+  height: 74.4vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 15%;
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transform: scale(1.0);
+    transition: all 0.2s;
+    cursor: pointer;
+    max-height: 250px;
+    
+  }
+  
+  .pokemon:hover {
+    transform: scale(1.05);
+  }
+  
+  .pokemon .img-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  
+  }
+  
+  .pokemon .img-container img {
+    /* max-width: 90%; */
+    width:120%;
+    margin-top: 00px;
+  }
+  
+  .pokemon .info {
+    margin-top: 20px;
+  }
+  
+  .pokemon .info .number {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+  }
+  
+  .pokemon .info .name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 15px 0 7px;
+    letter-spacing: 1px;
+  }
+  
+  .pokemon .info small {
+    font-size: 0.7em;
+    text-transform: capitalize;
+    font-weight: 200;
+  }
+  .arrow {
+    font-size: 20px;
+  }
+  
+  footer {
+    min-height: 100px;
+    padding: 1rem;
+    background-color: #ddd;
+    color: black;
+    text-align: center;
+    display: flex;
+
+  }
+
+  footer p {
+    margin: auto;
+  }
+  .emptyParty {
+    font-size: 30px;
+    padding-left: 1em;
+  }
+
+  .smallText {
+    font-size: 25px;
+  }
+  .searchBar {
+    margin: 1vh 5vh 1vh 5vh;
+  }
+  .filler {
+    width: 100%;
+  }
+  .padding {
+    justify-content: center;
+    margin: 5vh;
+    height: 75%;
+    width: 75%;
+    max-width: 200px;
+    max-height: 200px;
+  }
