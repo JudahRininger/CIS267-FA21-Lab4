@@ -60,6 +60,7 @@
             v-if="partyShowing"
             v-for="pokemon in partyPokemon"
             @click="removePokemonFromParty(pokemon)"
+            :style="{background: backgroundColor(pokemon)}"
           >
             <!-- <a href="#" id="${pokemon.id}"> Favorite </a></div> -->
             <div class="img-container">
@@ -74,11 +75,8 @@
               <span class="number">#{{pokemon.id}}</span>
               <!-- <span class="number">#{{pokemon.guid}}</span> -->
               <h3 class="name">{{pokemon.name}}</h3>
-              <small class="type"
-                >Type:
-                <span v-for="type in pokemon.types">
-                  {{ type.type.name }} /
-                </span>
+              <small class="type">
+                {{typeText(pokemon)}}
               </small>
             </div>
           </div>
@@ -93,10 +91,12 @@
             <!-- <button class="btn btn-outline-secondary" type="button" id="searchButton">Search</button> -->
           </div>
           <!-- <h1>{{searchString}}</h1> -->
-          <div id="all-pokemon">
+          <div id="all-pokemon" :style="{height: allPokemonHeight}">
             <div
               class="pokemon"
               v-for="pokemon in filteredPokemon"
+              :style="{background: backgroundColor(pokemon)}"
+
               @click="addPokemonToParty(pokemon)"
             >
               <!-- <a href="#" id="${pokemon.id}"> Favorite </a></div> -->
@@ -110,11 +110,8 @@
               <div class="info">
                 <span class="number">#{{pokemon.id}}</span>
                 <h3 class="name">{{pokemon.name}}</h3>
-                <small class="type"
-                  >Type:
-                  <span v-for="type in pokemon.types">
-                    {{ type.type.name }} /
-                  </span>
+                <small class="type">
+                  {{typeText(pokemon)}}
                 </small>
               </div>
             </div>
